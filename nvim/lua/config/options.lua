@@ -1,24 +1,34 @@
 -- lsp settings
-vim.lsp.enable({'clangd', 'rust_analyzer', 'basedpyright', 'lua_language_server'})
+vim.lsp.enable({ 
+    "clangd",
+    "rust_analyzer",
+    "basedpyright",
+    "lua_ls",
+    "terraformls",
+})
 vim.lsp.inlay_hint.enable(true)
 vim.diagnostic.config({ virtual_text = true }) -- virtual text diagnostics for lsp
 
--- lsp keymaps
-vim.keymap.set("n", "gd", function() vim.lsp.buf.definition() end)
-vim.keymap.set("n", "gr", function() vim.lsp.buf.rename() end)
 
+-- lsp keymaps
+vim.keymap.set("n", "gd", function()
+	vim.lsp.buf.definition()
+end)
+vim.keymap.set("n", "gR", function()
+	vim.lsp.buf.rename()
+end)
 
 -- lazy shortcut
 vim.keymap.set("n", "<leader>l", "<cmd>Lazy<cr>")
 
 -- renames linked to lsp
 vim.api.nvim_create_autocmd("User", {
-  pattern = "OilActionsPost",
-  callback = function(event)
-      if event.data.actions.type == "move" then
-          Snacks.rename.on_rename_file(event.data.actions.src_url, event.data.actions.dest_url)
-      end
-  end,
+	pattern = "OilActionsPost",
+	callback = function(event)
+		if event.data.actions.type == "move" then
+			Snacks.rename.on_rename_file(event.data.actions.src_url, event.data.actions.dest_url)
+		end
+	end,
 })
 
 -- center halfscreen jumps
@@ -55,21 +65,20 @@ vim.opt.tabstop = 4 -- spaces shown per tab
 vim.opt.softtabstop = 4 -- spaces when pressing tab
 vim.opt.smarttab = true
 vim.opt.smartindent = true
-vim.opt.autoindent = true
 
 -- Keybinds to make split navigation easier.
 --  Use CTRL+<hjkl> to switch between windows
 --
 --  See `:help wincmd` for a list of all window commands
-vim.keymap.set('n', '<C-h>', '<C-w><C-h>', { desc = 'Move focus to the left window' })
-vim.keymap.set('n', '<C-l>', '<C-w><C-l>', { desc = 'Move focus to the right window' })
-vim.keymap.set('n', '<C-j>', '<C-w><C-j>', { desc = 'Move focus to the lower window' })
-vim.keymap.set('n', '<C-k>', '<C-w><C-k>', { desc = 'Move focus to the upper window' })
+vim.keymap.set("n", "<C-h>", "<C-w><C-h>", { desc = "Move focus to the left window" })
+vim.keymap.set("n", "<C-l>", "<C-w><C-l>", { desc = "Move focus to the right window" })
+vim.keymap.set("n", "<C-j>", "<C-w><C-j>", { desc = "Move focus to the lower window" })
+vim.keymap.set("n", "<C-k>", "<C-w><C-k>", { desc = "Move focus to the upper window" })
 
-vim.keymap.set('n', '<leader>wl', "<cmd>vsplit<cr>", { desc = "Vsplit" })
-vim.keymap.set('n', '<leader>wj', "<cmd>split<cr>", { desc = "Hsplit" })
+vim.keymap.set("n", "<leader>wl", "<cmd>vsplit<cr>", { desc = "Vsplit" })
+vim.keymap.set("n", "<leader>wj", "<cmd>split<cr>", { desc = "Hsplit" })
 
 -- sync w system clipboard
 vim.schedule(function()
-  vim.opt.clipboard = 'unnamedplus'
+	vim.opt.clipboard = "unnamedplus"
 end)

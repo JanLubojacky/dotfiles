@@ -1,6 +1,6 @@
-return { 
+return {
 	"catppuccin/nvim",
-	lazy=false,
+	lazy = false,
 	priority = 1000,
 	name = "catppuccin",
 	config = function()
@@ -9,6 +9,6 @@ return {
 			no_italic = true,
 			transparent_background = true,
 		})
-		vim.cmd.colorscheme "catppuccin"
+		vim.cmd.colorscheme("catppuccin")
 	end,
 }
