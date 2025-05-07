@@ -11,6 +11,7 @@ os = '#ACB0BE'
 pink = '#F5C2E7'
 rust = '#d3462a'
 awsorange = '#FF9900'
+terraformpurple = '#5346DB'
 
 [transient_prompt]
 template = '  '
@@ -56,7 +57,13 @@ type = 'prompt'
 alignment = 'right'
 
 [[blocks.segments]]
-template = '  {{ .Profile }}'
+template = '󱁢 {{ .WorkspaceName }}'
+foreground = 'p:terraformpurple'
+type = 'terraform'
+style = 'plain'
+
+[[blocks.segments]]
+template = '   {{ .Profile }}'
 foreground = 'p:awsorange'
 type = 'aws'
 style = 'plain'
