@@ -1,6 +1,5 @@
-
-font-size = 15
-font-family = "MesloLGL Nerd Font"
+font-size = 14
+font-family = "JetBrains Mono"
 font-thicken = true
 
 theme = catppuccin-mocha
