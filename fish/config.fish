@@ -28,5 +28,7 @@ alias mm "micromamba"
 # uv activate env shortcut
 alias uva "source .venv/bin/activate.fish"
 
-alias prev "fzf -m --preview='ls -lth {} | awk '\''{ print \$5, \$8, \$7, \$6 }'\''; bat --color=always {}'"
-alias duch "du -ch * | sort -h" # displays file sizes
+# shows a prev of files
+alias prev "fzf -m --preview='ls -lth {} | awk '\''{ print \$5, \$8, \$7, \$6 }'\''; bat --color=always {}'" 
+# displays file sizes
+alias duch "du -ch * | sort -h"
