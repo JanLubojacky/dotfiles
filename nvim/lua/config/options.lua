@@ -3,6 +3,7 @@ vim.lsp.enable({
     "clangd",
     "rust_analyzer",
     "basedpyright",
+    -- "ty",
     "lua_ls",
     "terraformls",
 })
