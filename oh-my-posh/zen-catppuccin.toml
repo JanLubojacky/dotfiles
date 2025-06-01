@@ -57,7 +57,16 @@ type = 'prompt'
 alignment = 'right'
 
 [[blocks.segments]]
-template = '󱁢 {{ .WorkspaceName }}'
+template = 'exit code {{ .Code }}'
+foreground = 'p:lavender'
+type = 'status'
+style = 'plain'
+
+[blocks.segments.properties]
+always_enabled = false
+
+[[blocks.segments]]
+template = ' 󱁢 {{ .WorkspaceName }}'
 foreground = 'p:terraformpurple'
 type = 'terraform'
 style = 'plain'
