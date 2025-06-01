@@ -8,13 +8,14 @@ return {
 		-- or leave it empty to use the default settings
 		-- refer to the configuration section below
 		picker = {
-            enabled = true,
-            opts = {
-                hidden = true
-            },
-        },
+			enabled = true,
+			opts = {
+				hidden = true,
+			},
+		},
 		rename = { enabled = true }, -- lsp integrated file renaming
 		lazygit = { enabled = true },
+		git = { enabled = true },
 	},
 	keys = {
 		-- Top Pickers & Explorer
@@ -116,6 +117,12 @@ return {
 			"<leader>gg",
 			function()
 				Snacks.lazygit()
+			end,
+		},
+		{
+			"<leader>gt",
+			function()
+				Snacks.git.blame_line()
 			end,
 		},
 		-- Grep

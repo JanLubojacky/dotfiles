@@ -1,15 +1,20 @@
 -- lsp settings
-vim.lsp.enable({ 
-    "clangd",
-    "rust_analyzer",
-    "basedpyright",
-    -- "ty",
-    "lua_ls",
-    "terraformls",
+vim.lsp.enable({
+	"clangd",
+	"rust_analyzer",
+	"basedpyright",
+	-- "ty",
+	-- "pyrefly",
+	"lua_ls",
+	"terraformls",
+	"gh_actions_ls",
+	"tinymist",
 })
 vim.lsp.inlay_hint.enable(true)
 vim.diagnostic.config({ virtual_text = true }) -- virtual text diagnostics for lsp
 
+-- give windows border
+vim.o.winborder = "rounded"
 
 -- lsp keymaps
 vim.keymap.set("n", "gd", function()
@@ -17,6 +22,10 @@ vim.keymap.set("n", "gd", function()
 end)
 vim.keymap.set("n", "gR", function()
 	vim.lsp.buf.rename()
+end)
+
+vim.keymap.set("n", "gx", function()
+	vim.diagnostic.open_float()
 end)
 
 -- lazy shortcut
