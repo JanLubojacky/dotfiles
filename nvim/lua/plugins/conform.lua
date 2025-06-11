@@ -31,11 +31,13 @@ return {
 			},
 			ruff_sort_imports = {
 				command = "ruff",
-				args = { "check", "--select I", "--fix", "$FILENAME" },
+				args = { "check", "--select", "I", "--fix", "$FILENAME" },
+				stdin = false,
 			},
 			ruff_format = {
 				command = "ruff",
 				args = { "format", "$FILENAME" },
+				stdin = false,
 			},
 		},
 
