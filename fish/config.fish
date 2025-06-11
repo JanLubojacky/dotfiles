@@ -20,6 +20,7 @@ $MAMBA_EXE shell hook --shell fish --root-prefix $MAMBA_ROOT_PREFIX | source
 # <<< mamba initialize <<<
 
 alias p "python"
+alias n "nvim ."
 alias lg "lazygit"
 alias mpa "proxy-on"
 alias mpd "proxy-off"

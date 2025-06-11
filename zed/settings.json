@@ -19,10 +19,10 @@
     "edit_prediction_provider": "copilot"
   },
   "agent": {
-    "default_profile": "write",
+    "default_profile": "ask",
     "default_model": {
       "provider": "copilot_chat",
-      "model": "claude-3-7-sonnet"
+      "model": "claude-3.7-sonnet"
     },
     "version": "2"
   },
@@ -42,11 +42,14 @@
       ]
     }
   ],
+
   // "ui_font_size": 14,
   // "buffer_font_size": 12.0,
-  "ui_font_size": 17,
-  "buffer_font_size": 15.0,
-  "buffer_font_family": "MesloLGL Nerd Font",
+
+  "ui_font_size": 18,
+  "buffer_font_size": 14.0,
+
+  "buffer_font_family": "JetBrainsMono Nerd Font Mono",
   "tab_bar": {
     "show": false
   },
