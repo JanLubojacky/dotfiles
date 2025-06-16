@@ -1,6 +1,3 @@
-# source merck proxy script
-source $HOME/.config/fish/mrk-proxy.fish
-
 oh-my-posh init fish --config ~/.config/oh-my-posh/zen-catppuccin.toml | source
 
 # repaint oh-my-posh prompt on alt + <- and alt + -> directory history cycling
