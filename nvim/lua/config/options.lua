@@ -5,6 +5,7 @@ vim.lsp.enable({
 	"basedpyright",
 	-- "ty",
 	-- "pyrefly",
+	"gopls",
 	"lua_ls",
 	"terraformls",
 	"gh_actions_ls",
